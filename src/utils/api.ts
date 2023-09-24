@@ -38,7 +38,7 @@ const apiCall = async (endpoint: string, method: Uppercase<string>, data?: any, 
     })
     return res?.data
   } catch(error) {
-    throw new Error(error.response.data.msg)
+    throw new Error(error?.response?.data?.msg)
   }
 }
 
